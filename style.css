@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Poppins", serif;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+body{
+	background: hsl(0deg 0% 13.33%);
+}
+.heading{
+	color: #fff;
+	font-size: 3.5rem;
+	margin: 2rem 0;
+	font-weight: 500;
+}
+
+.heading::after{
+	content: "Progress Bar";
+	color: #fff;
+	background: hsl(339.71deg 82.93% 51.76%);
+	padding: 0 0.8rem;
+}
+.bars{
+	max-width: 550px;
+	margin: 3rem auto 2rem auto;
+
+}
+.bar{
+	display: flex;
+	flex-direction: column;
+	color: #fff;
+	align-items: flex-start;
+}
+.line{
+	width: 100%;
+	height: 7px;
+	background: hsl(0deg 0% 58.82%);
+	
+	border-radius: 10px;
+	    display: flex
+;
+    justify-content: flex-start;
+    align-items: center;
+}
+.progress{
+	background: hsl(339.9deg 82.19% 51.57%);
+	width: 86%;
+	height: 8px;
+	animation: 2s animate linear;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.percentage{
+	border: 1px solid crimson;
+	border-radius: 50%;
+	width: 31px;
+	height: 31px;
+	padding: 3px;
+	font-size: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: hsl(0deg 0% 13.33%);
+
+}
+
+@keyframes animate {
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 86%;
+	}
+}
+@keyframes animate1 {
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 74%;
+	}
+}
+.bars:nth-child(3) .bar .progress{
+	width: 74%;
+animation: 2s animate1 linear;
+background: hsl(64.44deg 69.83% 54.51%);
+}
+.bars:nth-child(3) .bar .percentage{
+	border-color: hsl(64.44deg 69.83% 54.51%);
+}
+
+@keyframes animate2 {
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 65%;
+	}
+}
+.bars:nth-child(4) .bar .progress{
+	width: 65%;
+animation: 2s animate2 linear;
+background: hsl(187.53deg 99.08% 42.55%);
+}
+.bars:nth-child(4) .bar .percentage{
+	border-color: hsl(187.53deg 99.08% 42.55%);
+}
+@keyframes animate3 {
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 54%;
+	}
+}
+.bars:nth-child(5) .bar .progress{
+	width: 54%;
+animation: 2s animate3 linear;
+background: hsl(53.4deg 98.96% 62.16%);
+}
+.bars:nth-child(5) .bar .percentage{
+	border-color: hsl(53.4deg 98.96% 62.16%);
+}
+@keyframes animate4 {
+	0%{
+		width: 0;
+	}
+	100%{
+		width: 49%;
+	}
+}
+.bars:nth-child(6) .bar .percentage{
+	border-color: hsl(290.28deg 65.14% 42.75%);
+}
+.bars:nth-child(6) .bar .progress{
+	width: 49%;
+animation: 2s animate4 linear;
+background: hsl(290.28deg 65.14% 42.75%);
+}
